@@ -31,7 +31,7 @@ const DateDay = ({ datum, onEdit, onDelete }) => {
   // };
 
   return (
-    <section className="w-[100%] max-h-[450px] overflow-y-auto py-[15px] px-[15px] flex flex-col items-center gap-1 border-t-[1px] border-dashed border-slate-950 shadow-xl">
+    <section className="w-[100%] max-h-[450px] overflow-y-auto py-[15px] px-[15px] flex flex-col items-center gap-1 shadow-xl">
       <div className="date-incomes-wrapper w-[100%] flex items-center justify-between">
         <h3 className="text-[20px] font-[600]">Date</h3>
         <h3 className="text-[20px] font-[600]">Income</h3>

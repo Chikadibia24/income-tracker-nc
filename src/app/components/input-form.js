@@ -96,13 +96,13 @@ const InputForm = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-[25px] items-center justify-center bg-slate-700 w-[98%] h-[350px] rounded-md"
+        className="flex flex-col gap-[25px] items-center justify-center bg-slate-100 w-[98%] h-[350px] rounded"
       >
-        <p className="text-[16px] text-white">{message}</p>
+        <p className="text-[16px] text-black font-[600]">{message}</p>
 
         <div className="inputs-wrapper w-[100%] flex flex-wrap items-center justify-center gap-[15px]">
           <div className="date-wrapper flex flex-col items-center">
-            <label htmlFor="date" className="text-[18px] text-white p-0 m-0">
+            <label htmlFor="date" className="text-[18px] text-black p-0 m-0">
               Enter Date
             </label>
             <input
@@ -111,13 +111,13 @@ const InputForm = () => {
               name="date"
               value={input.date}
               type="date"
-              className="text-[20px] h-[45px] w-[150px] rounded"
+              className="text-[20px] h-[45px] w-[152px] rounded"
               onChange={handleChange}
             />
           </div>
 
           <div className="income-wrapper flex flex-col items-center">
-            <label htmlFor="income" className="text-[18px] text-white p-0 m-0">
+            <label htmlFor="income" className="text-[18px] text-black p-0 m-0">
               Enter Income
             </label>
             <input
@@ -127,13 +127,13 @@ const InputForm = () => {
               name="income"
               value={input.income * 1}
               type="number"
-              className="text-[20px] h-[45px] w-[150px] rounded"
+              className="text-[20px] h-[45px] w-[152px] rounded"
               onChange={handleChange}
             />
           </div>
 
           <div className="remark-wrapper flex flex-col items-center">
-            <label htmlFor="remark" className="text-[18px] text-white p-0 m-0">
+            <label htmlFor="remark" className="text-[18px] text-black p-0 m-0">
               Enter Remark
             </label>
             <input
@@ -147,7 +147,7 @@ const InputForm = () => {
             />
           </div>
         </div>
-        <button className="text-[22px] text-white font-bold w-[350px] h-[50px] bg-slate-950 rounded-[4px]">
+        <button className="text-[22px] text-white font-bold w-[325px] h-[50px] bg-slate-950 rounded-[4px]">
           {isEditing ? 'Update' : 'Save'}
         </button>
       </form>
