@@ -147,7 +147,7 @@ const InputForm = () => {
             />
           </div>
         </div>
-        <button className="text-[22px] text-white font-bold w-[325px] h-[50px] bg-slate-950 rounded-[4px]">
+        <button className="text-[22px] text-black font-bold w-[325px] h-[50px] bg-slate-200 border border-[gray] rounded-[4px]">
           {isEditing ? 'Update' : 'Save'}
         </button>
       </form>
