@@ -60,19 +60,19 @@ const DateDay = ({ datum, onEdit, onDelete }) => {
                   </div>
                 </div>
 
-                <div className="buttons-wrapper w-[100%] flex items-center justify-center gap-[50px]">
+                <div className="buttons-wrapper w-[100%] flex items-center justify-between gap-[15px]">
                   <button
                     onClick={() => onDelete(index)}
-                    className="text-[16px] text-[#2b0606] font-[600] w-[78px] h-[33px] bg-[red] border border-[#272727] rounded"
+                    className="text-[15px] text-[red] font-[600] flex items-center justify-center w-[25px] h-[25px] pt-[2px] bg-[#f1f5f9] border border-[red] rounded"
                   >
-                    Delete
+                    D
                   </button>
 
                   <button
                     onClick={() => onEdit(index)}
-                    className="text-[16px] font-[600] text-[#2beeba] w-[80px] h-[34px] bg-[teal] border border-[#272727] rounded"
+                    className="text-[15px] font-[600] text-[teal] flex items-center justify-center w-[25px] h-[25px] pt-[2px] bg-[#f1f5f9] border border-[teal] rounded"
                   >
-                    Edit
+                    E
                   </button>
                 </div>
               </div>
