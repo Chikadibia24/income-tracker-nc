@@ -33,8 +33,8 @@ const DateDay = ({ datum, onEdit, onDelete }) => {
   return (
     <section className="w-[100%] max-h-[450px] overflow-y-auto py-[15px] px-[15px] flex flex-col items-center gap-1 shadow-xl">
       <div className="date-incomes-wrapper w-[100%] flex items-center justify-between">
-        <h3 className="text-[20px] font-[600]">Date</h3>
-        <h3 className="text-[20px] font-[600]">Income</h3>
+        <h3 className="text-[18px] font-[600]">Date</h3>
+        <h3 className="text-[18px] font-[600]">Income</h3>
       </div>
 
       <div className="date-incomes-wrapper w-[100%] flex flex-col-reverse">
@@ -42,7 +42,7 @@ const DateDay = ({ datum, onEdit, onDelete }) => {
           ? datum.map((item, index) => (
               <div
                 key={index}
-                className="date-incomes-buttons-wrapper w-[100%] h-[100px] flex flex-col gap-[10px] border-t border-[#26282f] hover:bg-slate-200"
+                className="date-incomes-buttons-wrapper w-[100%] h-[115px] flex flex-col justify-center gap-[10px] border-t border-[#e2e8f0] hover:bg-slate-100"
               >
                 <div className="date-incomes-remarks-wrapper w-[100%] flex flex-col ">
                   <div className="date-incomes-wrapper w-[100%] flex items-center justify-between">
@@ -60,17 +60,17 @@ const DateDay = ({ datum, onEdit, onDelete }) => {
                   </div>
                 </div>
 
-                <div className="buttons-wrapper w-[100%] flex items-center justify-between gap-[15px]">
+                <div className="buttons-wrapper w-[100%] flex items-center justify-between gap-[15px] px-[8px]">
                   <button
                     onClick={() => onDelete(index)}
-                    className="text-[15px] text-[red] font-[600] flex items-center justify-center w-[25px] h-[25px] pt-[2px] bg-[#f1f5f9] border border-[red] rounded"
+                    className="text-[15px] text-[red] font-[600] flex items-center justify-center w-[38px] h-[38px] pt-[2px] bg-[#f1f5f9] border border-[red] rounded-[6px]"
                   >
                     D
                   </button>
 
                   <button
                     onClick={() => onEdit(index)}
-                    className="text-[15px] font-[600] text-[teal] flex items-center justify-center w-[25px] h-[25px] pt-[2px] bg-[#f1f5f9] border border-[teal] rounded"
+                    className="text-[15px] font-[600] text-[teal] flex items-center justify-center w-[38px] h-[38px] pt-[2px] bg-[#f1f5f9] border border-[teal] rounded-[6px]"
                   >
                     E
                   </button>

@@ -89,10 +89,7 @@ const InputForm = () => {
 
   return (
     <div className="date-incomes-wrapper w-[100%] h-[auto] flex flex-col items-center gap-[20px]">
-      <DateDay
-        datum={data} 
-        onEdit={handleEdit}
-        onDelete={handleDelete} />
+      <DateDay datum={data} onEdit={handleEdit} onDelete={handleDelete} />
 
       <form
         onSubmit={handleSubmit}
@@ -111,7 +108,7 @@ const InputForm = () => {
               name="date"
               value={input.date}
               type="date"
-              className="text-[20px] h-[45px] w-[152px] rounded"
+              className="text-[20px] h-[45px] w-[152px] rounded-[6px] bg-slate-200"
               onChange={handleChange}
             />
           </div>
@@ -127,7 +124,7 @@ const InputForm = () => {
               name="income"
               value={input.income * 1}
               type="number"
-              className="text-[20px] h-[45px] w-[152px] rounded"
+              className="text-[20px] h-[45px] w-[152px] flex justify-center rounded-[6px] bg-slate-200"
               onChange={handleChange}
             />
           </div>
@@ -142,13 +139,13 @@ const InputForm = () => {
               name="remark"
               value={input.remark}
               type="text"
-              className="text-[20px] h-[45px] w-[320px] flex justify-center rounded"
+              className="text-[20px] h-[45px] w-[320px] flex justify-center rounded-[6px] bg-slate-200"
               onChange={handleChange}
             />
           </div>
         </div>
-        <button className="text-[22px] text-black font-bold w-[325px] h-[50px] bg-slate-200 border border-[gray] rounded-[4px]">
-          {isEditing ? 'Update' : 'Save'}
+        <button className="text-[22px] text-black font-bold w-[325px] h-[50px] bg-slate-200 hover:bg-slate-300 border border-[gray] rounded-[6px]">
+          {isEditing ? "Update" : "Save"}
         </button>
       </form>
     </div>
