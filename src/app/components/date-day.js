@@ -55,8 +55,11 @@ const DateDay = ({ datum, onEdit, onDelete }) => {
                     </h3>
                   </div>
 
-                  <div className="remarks-wrapper">
-                    <h3 className="text-[14px] font-[500]">{item.remark}</h3>
+                  <div className="remarks-wrapper flex items-center gap-[4px]">
+                    <h5 className="text-[12px] font-[500]">Remark: </h5>
+                    <h3 className="text-[13px] text-[#020617] font-[600]">
+                      {item.remark}
+                    </h3>
                   </div>
                 </div>
 

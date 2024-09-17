@@ -4,7 +4,11 @@ import { useState, useEffect } from "react";
 import DateDay from "./date-day";
 
 const InputForm = () => {
-  const [input, setInput] = useState({ date: "", income: "" * 1, remark: "" });
+  const [input, setInput] = useState({
+    date: "",
+    income: "" * 1,
+    remark: "",
+  });
   const [message, setMessage] = useState("");
   const [data, setData] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
@@ -50,7 +54,7 @@ const InputForm = () => {
     if (isEditing) {
       // Update the specific entry if editing
       savedData = [...data];
-      savedData[editIndex] = {...input};
+      savedData[editIndex] = { ...input };
       setIsEditing(false);
       setEditIndex(null);
     } else {
@@ -75,13 +79,13 @@ const InputForm = () => {
 
   // Handle edit button click
   const handleEdit = (index) => {
-    setInput({...data[index] }); // Prefill form with selected entry
+    setInput({ ...data[index] }); // Prefill form with selected entry
     setIsEditing(true);
     setEditIndex(index); // Store the index of the entry being edited
   };
 
-    // Handle delete button click
-    const handleDelete = (index) => {
+  // Handle delete button click
+  const handleDelete = (index) => {
     const savedData = data.filter((_, i) => i !== index);
     setData(savedData);
     localStorage.setItem("data", JSON.stringify(savedData));
@@ -120,9 +124,8 @@ const InputForm = () => {
             <input
               id="income"
               required
-              placeholder={`${0}`}
               name="income"
-              value={input.income * 1}
+              value={input.income}
               type="number"
               className="text-[20px] h-[45px] w-[152px] flex justify-center rounded-[6px] bg-slate-200"
               onChange={handleChange}
